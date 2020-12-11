@@ -1,0 +1,5 @@
+package WeeaBot
+
+class CommandDeterminant {
+
+}

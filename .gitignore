@@ -10,4 +10,22 @@ gen
 ### Scala template
 *.class
 *.log
-
+*.conf
+project/target/config-classes/$74f52aa2d92ade35be47.cache
+project/target/config-classes/$a108a6656092b1005147.cache
+project/target/config-classes/$abbbcdc09aee1da889a2.cache
+project/target/config-classes/$f8a1d724db67eca1dc7d.cache
+project/target/streams/compile/_global/_global/compileBinaryFileInputs/
+project/target/streams/compile/_global/_global/compileSourceFileInputs/
+project/target/streams/compile/_global/_global/dependencyClasspathFiles/
+project/target/streams/compile/_global/_global/managedSourcePaths/
+project/target/streams/compile/compileIncSetup/
+project/target/streams/compile/compileOutputs/
+src/main/java/
+src/main/scala/WeeaBot/Commands/
+src/test/
+target/.history
+target/generated-sources/
+target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/
+target/task-temp-directory/
+!/src/main/resources/cred.conf

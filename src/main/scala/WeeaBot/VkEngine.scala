@@ -12,7 +12,7 @@ import com.vk.api.sdk.queries.messages.MessagesGetLongPollHistoryQuery
 
 
 class VkEngine(groupId: Int, accessToken: String) {
-  //private val APP_ID: Int = 7694238
+    //private val APP_ID: Int = 7694238
   private var transportClient: HttpTransportClient = _
   private var vk: VkApiClient = _
   private var actor: GroupActor = _
@@ -61,9 +61,20 @@ object VkEngine {
   private var _instance: VkEngine = null
 
   def instance(groupId: Int, accessToken: String): VkEngine = {
-    if (_instance == null)
-      _instance = new VkEngine(groupId, accessToken)
+    if (_instance == null) {
+      try {
+        _instance = new VkEngine(groupId, accessToken)
+      } catch {
+        case e: ApiException => println(e.getMessage)
+        case e: ClientException => println(e.getMessage)
+      }
+    }
     _instance
   }
   def terminate(): Unit = _instance = null
+  def getMessage: Message = try {
+    _instance.getMessage
+  } catch {
+    case e:NullPointerException => null
+  }
 }

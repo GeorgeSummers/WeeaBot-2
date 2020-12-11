@@ -10,4 +10,5 @@ gen
 ### Scala template
 *.class
 *.log
+*.conf
 
